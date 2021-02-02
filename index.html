@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>live text editor</title>
+    <style>
+        body{
+            background-color:black;
+        }
+        .container{
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            grid-gap: 10px;
+        }
+        iframe{
+          width: 400px;
+            background: white;
+            height: 600px;
+        }
+        textarea{
+            width: 316px;
+            border:2px solid black;
+            background-color: #8080805c;
+        color: white;
+        font-size: 17px;
+       font-family: system-ui;
+         height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div><textarea id="code" onkeyup="coding()">code here...</textarea></div>
+        <div><iframe id="output"></iframe></div>
+    </div>
+
+    <script>
+        function coding(){
+            const code=document.getElementById("code").value;
+            const output=document.getElementById("output");
+            output.srcdoc=code;
+        }
+    </script>
+    
+</body>
+</html>
