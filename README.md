@@ -5,5 +5,5 @@ this website is a live text editor .
 
 https://b-chandru.github.io/texteditor/
 
-##introduction
+## introduction
 this  website is bulid using html,css,ja.
